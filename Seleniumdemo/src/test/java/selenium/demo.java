@@ -53,7 +53,7 @@ public class demo {
 	//	Thread.sleep(4000);
 		Select fruits = new Select(driver.findElement(By.xpath("//*[@id=\"field27\"]/div/select")));
 		fruits.selectByVisibleText("51 - 100 employees");
-		//fruits.selectByIndex(3);
+		fruits.selectByIndex(3);
 		//Thread.sleep(4000);
 
 		/*
