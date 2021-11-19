@@ -15,7 +15,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Demo2 {
 
 	WebDriver driver;
-
 	@Before
 	public void steup() {
 
@@ -24,21 +23,15 @@ public class Demo2 {
 		driver = new ChromeDriver();
 		driver.navigate().to(" https://www.sugarcrm.com/uk/ ");
 		driver.manage().window().maximize();
-
 	}
-
 	@After
 	public void close() {
-
 		driver.quit();
-
 	}
 
 	@Test
 	public void runtest() throws InterruptedException {
-
 		driver.findElement(By.xpath("//span[@class='btn btn-primary']")).click();
-
 		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys("Baati");
 		//Thread.sleep(4000);
 		driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys("Rafaa");
@@ -55,7 +48,6 @@ public class Demo2 {
 		fruits.selectByVisibleText("51 - 100 employees");
 		fruits.selectByIndex(3);
 		//Thread.sleep(4000);
-
 		/*
 		WebElement btn = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[4]/div[2]/div/button"));
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -63,7 +55,6 @@ public class Demo2 {
 
 		WebElement Element = driver.findElement(By.xpath("//select[@class='element-container form-control mb-2']"));
 		Select select = new Select(Element);
-
 		select.selectByValue("level1");
 		Thread.sleep(4000);
 
